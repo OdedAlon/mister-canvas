@@ -1,13 +1,81 @@
+@font-face {
+    font-family: 'alfa';
+    src: url("../fonts/AlfaSlabOne-Regular.ttf");
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    font-family: alfa, sarif;
     background-color: lightblue;
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: grab;
+    color: #fff;
+}
+
+header {
+    /* background-color: rgba(0, 86, 112, 0.692); */
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
 }
 
 canvas {
+    display: flex;
+    margin-inline-start: 5vw;
     border: 1px solid red;
     background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: rgba(8, 205, 240, 0.76);
+    border: 1px solid;
+    border-radius: 2em;
+    padding: 0.5rem 4.5rem;
+}
+
+.container { 
+    max-width: 65vw; 
+}
+
+.main-nav {
+    font-size: 2rem;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-rows: 1fr, 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.select {
+    justify-self: end;
+}
+
+.download-link {
+    grid-column: 3 / -1;
+}
+
+.canvas-container {
+    display: flex;
+    align-items: center;
 }
