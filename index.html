@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Mister Canvas</title>
+</head>
+
+<body onload="init()">
+    <h1>Mister Canvas</h1>
+
+    <div class="main-nav">
+        <label for="select-shape">SHAPES:</label>
+        <select id="select-shape" name="select-shape">
+            <option value="rect">SQUARES</option>
+            <option value="arc">CIRCLES</option>
+        </select>
+        <label for="border-color">BORDER COLOR:</label>
+        <input type="color" id="border-color">
+        <label for="shape-color">SHAPE COLOR:</label>
+        <input type="color" id="shape-color">
+        <a href="#" onclick="downloadCanvas(this)" download="">Download your CANVAS</a>
+    </div>
+    <div class="canvas-container">
+        <canvas id="my-canvas" height="700" width="700" onclick="draw(event)"></canvas>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
